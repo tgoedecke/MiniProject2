@@ -45,6 +45,8 @@ python3 extrNpm.py > myurls
 releases_yourutkid collection. Reference to Github API: 
 ```
 cat myurls | python3 readGit.py 
+#or
+python3 readGit.py < myurls
 ```
 4. Extract releases from mongodb
 ```
