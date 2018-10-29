@@ -44,9 +44,8 @@ python3 extrNpm.py > myurls
 3. For each such package, get a list of all releases.  Example file is readGit.py (you can use it with the snippet above to get releases). It reads from standard input and populates
 releases_yourutkid collection. Reference to Github API: 
 ```
-https://developer.github.com/v3/repos/releases/
+cat myurls | python3 readGit.py 
 ```
-
 4. Extract releases from mongodb
 ```
 import pymongo, json, sys
@@ -63,7 +62,7 @@ for r in coll.find():
 ```          
 The above code is in extrRels.py. To output the urls:
 ```
-cat myurls | python3 extrRels.py > myrels
+python3 extrRels.py > myrels
 ```
 
 
