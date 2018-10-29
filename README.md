@@ -82,7 +82,7 @@ For example:
 ```
 For example
 ```
-cat myrels | python3 compareRels.py
+cat myrels | python3 compareRels.py > myrels.cmp
 ```
  
 | number  | GitHub Username | NetID | Name |
