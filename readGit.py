@@ -6,6 +6,7 @@ gleft = 1500
 
 #client = pymongo.MongoClient ()
 client = pymongo.MongoClient (host="da1.eecs.utk.edu")
+
 login = "tgoedecke"
 passwd = "happy2Bm3"
 
@@ -14,6 +15,8 @@ headers = {'Accept': 'application/vnd.github.v3.star+json'}
 headers = {'Accept': 'application/vnd.github.hellcat-preview+json'}
 
 db = client['fdac18mp2'] # added in class
+
+
 collName = 'releases_pgoedec1'
 coll = db [collName]
 def wait (left):
@@ -124,4 +127,5 @@ for n in sys.stdin.readlines():
       for ch in chunks (v, n):
         coll.insert_one ( { 'chunk': i, 'name':n, 'url': url, 'utc':ts, 'values': ch } )
         i = i + 1 
+
 

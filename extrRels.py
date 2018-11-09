@@ -1,7 +1,11 @@
 import pymongo, json, sys
 client = pymongo.MongoClient (host="da1")
 db = client ['fdac18mp2']
+
 id = "pgoedec1"
+
+
+
 coll = db [ 'releases_' + id]
 for r in coll.find():
   n = r['name']
@@ -9,4 +13,7 @@ for r in coll.find():
     for v in r['values']:
       if 'tag_name' in v:
         print (n+';'+v['tag_name'])
+
+
+
 
